@@ -1,0 +1,18 @@
+export const images = {
+  heroSerum: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/5ab84dc54_generated_d6f44466.png",
+  heroPortrait: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/ec54f07d1_generated_49ccfec8.png",
+  productsFlatlay: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/4f35f6305_generated_2a09d512.png",
+  serumTexture: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/4376bc11d_generated_12865c01.png",
+  hairTexture: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/635a62f47_generated_7b34984b.png",
+  maleSkincare: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/d35ad5c1e_generated_3d277bd7.png",
+  creamTexture: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/38577e538_generated_f61a4dea.png",
+  naturalIngredient: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/de810e478_generated_12853bbe.png",
+  teenPortrait: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/3ab0b72c4_generated_f3a7815d.png",
+  productBottle: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/53369b7c2_generated_9ea3e77b.png",
+  hairOil: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/85e60074f_generated_0bb64715.png",
+  faceWash: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/a98c7be86_generated_a7e0483d.png",
+  moisturizer: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/34350387b_generated_cd5a9b2e.png",
+  shampoo: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/ad8df9333_generated_39d8159e.png",
+  sunscreen: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/915ef3c52_generated_3ce38c0d.png",
+  hairMask: "https://media.base44.com/images/public/69c3a0c9f711593907ab2af8/b11d80036_generated_df1d88fc.png",
+};
