@@ -6,6 +6,21 @@ const createLocalStore = (entityName, initialData = []) => {
   // Initialize with seed data if empty
   if (!localStorage.getItem(KEY) || localStorage.getItem(KEY) === '[]') {
     localStorage.setItem(KEY, JSON.stringify(initialData));
+  } else if (entityName === 'Product') {
+    // Sync images if they are still data URLs (from user's phone upload)
+    try {
+      let items = JSON.parse(localStorage.getItem(KEY));
+      let changed = false;
+      items = items.map(item => {
+        const defaultItem = initialData.find(d => d.name === item.name);
+        if (defaultItem && item.image_url.startsWith('data:')) {
+          item.image_url = defaultItem.image_url;
+          changed = true;
+        }
+        return item;
+      });
+      if (changed) localStorage.setItem(KEY, JSON.stringify(items));
+    } catch (e) { console.error("Sync failed", e); }
   }
 
   const getAll = () => {
