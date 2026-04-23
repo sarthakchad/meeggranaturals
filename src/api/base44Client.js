@@ -1,10 +1,13 @@
-// ─────────────────────────────────────────────────────────────
-//  LOCAL STORAGE MOCK  — replaces the live Base44 SDK backend
-//  All data is stored in your browser's localStorage.
-// ─────────────────────────────────────────────────────────────
+import { defaultProducts } from '../data/defaultProducts';
 
-const createLocalStore = (entityName) => {
+const createLocalStore = (entityName, initialData = []) => {
   const KEY = `naturals_${entityName}`;
+
+  // Initialize with seed data if empty
+  if (!localStorage.getItem(KEY) || localStorage.getItem(KEY) === '[]') {
+    localStorage.setItem(KEY, JSON.stringify(initialData));
+  }
+
   const getAll = () => {
     try { return JSON.parse(localStorage.getItem(KEY) || '[]'); }
     catch { return []; }
@@ -60,7 +63,7 @@ const createLocalStore = (entityName) => {
 
 export const base44 = {
   entities: {
-    Product:             createLocalStore('Product'),
+    Product:             createLocalStore('Product', defaultProducts),
     CartItem:            createLocalStore('CartItem'),
     WishlistItem:        createLocalStore('WishlistItem'),
     Order:               createLocalStore('Order'),
