@@ -13,7 +13,7 @@ const createLocalStore = (entityName, initialData = []) => {
       let changed = false;
       items = items.map(item => {
         const defaultItem = initialData.find(d => d.name === item.name);
-        if (defaultItem && item.image_url.startsWith('data:')) {
+        if (defaultItem && (item.image_url.startsWith('data:') || !item.image_url)) {
           item.image_url = defaultItem.image_url;
           changed = true;
         }
