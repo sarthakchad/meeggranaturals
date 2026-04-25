@@ -1,19 +1,21 @@
 import { defaultProducts } from '../data/defaultProducts';
+import { createFirebaseStore, firebaseIntegrations } from './firebaseClient';
+
+// Change this to true to enable Cloud Database
+const USE_FIREBASE = localStorage.getItem('naturals_use_firebase') === 'true';
 
 const createLocalStore = (entityName, initialData = []) => {
   const KEY = `naturals_${entityName}`;
-
-  // Initialize with seed data if empty
+  // ... existing local store logic ...
   if (!localStorage.getItem(KEY) || localStorage.getItem(KEY) === '[]') {
     localStorage.setItem(KEY, JSON.stringify(initialData));
   } else if (entityName === 'Product') {
-    // Sync images if they are still data URLs (from user's phone upload)
     try {
       let items = JSON.parse(localStorage.getItem(KEY));
       let changed = false;
       items = items.map(item => {
         const defaultItem = initialData.find(d => d.name === item.name);
-        if (defaultItem && (item.image_url.startsWith('data:') || !item.image_url)) {
+        if (defaultItem && (item.image_url?.startsWith('data:') || !item.image_url)) {
           item.image_url = defaultItem.image_url;
           changed = true;
         }
@@ -76,8 +78,20 @@ const createLocalStore = (entityName, initialData = []) => {
   };
 };
 
+const firebaseEntities = USE_FIREBASE ? {
+  Product:             createFirebaseStore('Product'),
+  CartItem:            createFirebaseStore('CartItem'),
+  WishlistItem:        createFirebaseStore('WishlistItem'),
+  Order:               createFirebaseStore('Order'),
+  Review:              createFirebaseStore('Review'),
+  ContactMessage:      createFirebaseStore('ContactMessage'),
+  NewsletterSubscriber:createFirebaseStore('NewsletterSubscriber'),
+  SiteSetting:         createFirebaseStore('SiteSetting'),
+} : null;
+
 export const base44 = {
-  entities: {
+  isCloud: USE_FIREBASE,
+  entities: USE_FIREBASE ? firebaseEntities : {
     Product:             createLocalStore('Product', defaultProducts),
     CartItem:            createLocalStore('CartItem'),
     WishlistItem:        createLocalStore('WishlistItem'),
@@ -87,7 +101,7 @@ export const base44 = {
     NewsletterSubscriber:createLocalStore('NewsletterSubscriber'),
     SiteSetting:         createLocalStore('SiteSetting'),
   },
-  integrations: {
+  integrations: USE_FIREBASE ? firebaseIntegrations : {
     Core: {
       UploadFile: async ({ file }) => {
         return new Promise((resolve, reject) => {
@@ -104,4 +118,22 @@ export const base44 = {
     logout: () => {},
     redirectToLogin: () => {},
   },
+  // Migration helper
+  migration: {
+    toggleCloud: (enable) => {
+      localStorage.setItem('naturals_use_firebase', enable ? 'true' : 'false');
+      window.location.reload();
+    },
+    migrateToCloud: async () => {
+      if (!USE_FIREBASE) return { error: "Please enable Cloud Mode first." };
+      
+      const localStore = createLocalStore('Product', defaultProducts);
+      const localProducts = await localStore.list();
+      
+      const cloudStore = createFirebaseStore('Product');
+      await cloudStore.batchCreate(localProducts);
+      
+      return { success: true, count: localProducts.length };
+    }
+  }
 };

@@ -123,7 +123,7 @@ export const defaultProducts = [
     "ingredients": "Kumari Swarasa (Aloe Barbadensis Leaf Juice) 1g, Mulethi (Glycyrrhiza glabra) .5g, Neern (Azadirachta indica leaves powder).01g, Amla (Emblica Officinalis Fruit Extract) .01g, Kadi patta (Murraya koenigii) leaf extract 0.1g. Moringa (Moringa oleifera) leaf extract.01g, Kalonji (Nigella seed nd extract 0.1g, Methi dana (Trigonella Foenum-Graecum Seed Extract Dis, Pudina (Mentha piperita L) Oil .02g, Rosemary (ROSMARINUS OFFICINALIS) LEAF OIL .05g, Badam Taila (Almond Oil) 0.1g, Til Tale Sesame Oil) 2g, Narikela Taila (Coconut Oil) 2g, Cream Base QS Preservatives- Phenoxyethanol, Potassium Sorbate.",
     "size": "100g",
     "gender": "all",
-    "image_url": "",
+    "image_url": "/products/hair_spa_cream.png",
     "gallery_urls": [],
     "combo_product_ids": [],
     "skin_types": [
@@ -447,7 +447,7 @@ export const defaultProducts = [
     "ingredients": "Each 10g Contains-  Kumari Swarasa (Aloe Barbadensis Leaf Juice) 29.Gulab Jal Rosa indica) Zizanioides) Root Extract.05g Karambha (Avena Sativa Kernel Oat Miik Steam Distilled 1g. Madhuyasti (Glycyrrhiza glabra).IgVirana (Vetiveria Extract Ig. Lotion Base Q.s Sugandhit Dravya Q.5 Preservatives. Potassium Sorbate, Phenoxyethanol Ref #BPN BAPI",
     "size": "50g",
     "gender": "all",
-    "image_url": "",
+    "image_url": "/products/day_cream.png",
     "gallery_urls": [],
     "combo_product_ids": [],
     "skin_types": [
@@ -580,7 +580,7 @@ export const defaultProducts = [
     "ingredients": "Multani Mitti (Fullers Earth ) 2g, Gairika ( Indian red earth) album.) 10g, Manjistha (Rubia cordifolia) .05g, Haridra (Curcuma Sg. Rose Kaolin clay (Kaolinite. ).5g, Safed Chandan (Santalum longa) 05g, Mulethi (Glycyrrhiza Glabra Root Extract 15g, Dhanya (Oryza Sativa) Bran Extract .05g, Kesar (Crocus Sativus Flower Extract) 05g, Base Q.S Preservatives-Potassium Sorbate, Phenoxyethanol. REF #BPN #API",
     "size": "",
     "gender": "all",
-    "image_url": "",
+    "image_url": "/products/glow_face_pack.png",
     "gallery_urls": [],
     "combo_product_ids": [],
     "skin_types": [
