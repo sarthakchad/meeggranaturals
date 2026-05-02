@@ -10,7 +10,7 @@ const faqs = [
   { q: "What is your return policy?", a: "We offer a 30-day satisfaction guarantee. If you're not happy with your purchase, contact us for a full refund or exchange." },
   { q: "Are your products suitable for sensitive skin?", a: "Yes! All our products are dermatologist-tested, hypoallergenic, and free from harsh chemicals. We recommend patch-testing any new product." },
   { q: "Do you offer international shipping?", a: "Currently we ship within India. International shipping is coming soon — subscribe to our newsletter for updates!" },
-  { q: "Are your products tested on animals?", a: "Absolutely not. Meegra Naturals is proudly cruelty-free. We never test on animals and never will." },
+  { q: "Are your products tested on animals?", a: "Absolutely not. Meeggra Naturals is proudly cruelty-free. We never test on animals and never will." },
   { q: "How long does shipping take?", a: "Standard shipping takes 3-5 business days. Express shipping (1-2 days) is available at checkout." },
   { q: "Can men use your skincare products?", a: "Yes! Our products are formulated for all genders. Skin is skin — our formulations work regardless of gender." },
 ];

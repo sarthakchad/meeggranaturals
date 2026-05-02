@@ -30,7 +30,7 @@ export default function Navbar({ onCartOpen, onSearchOpen }) {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link to="/"><h1 className="font-display text-2xl lg:text-3xl font-light tracking-editorial text-foreground">MEEGRA NATURALS</h1></Link>
+            <Link to="/"><h1 className="font-display text-2xl lg:text-3xl font-light tracking-editorial text-foreground">MEEGGRA NATURALS</h1></Link>
             <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link) => (
                 <Link key={link.path} to={link.path} className="text-sm tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-300 uppercase font-light">{link.label}</Link>
