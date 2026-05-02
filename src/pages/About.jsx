@@ -23,7 +23,7 @@ export default function About() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-[11px] uppercase tracking-ultra-wide text-muted-foreground mb-6">Our Story</p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-light tracking-wide mb-6">Beauty Should Be <span className="italic">Honest</span></h1>
-            <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">We started Naturals with a simple belief: everyone deserves access to clean, effective skincare and haircare — without paying luxury prices or compromising on quality.</p>
+            <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">We started Meegra Naturals with a simple belief: everyone deserves access to clean, effective skincare and haircare — without paying luxury prices or compromising on quality.</p>
           </motion.div>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function About() {
             <h2 className="font-display text-3xl md:text-4xl font-light mb-6">Born from Frustration, Built with Care</h2>
             <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
               <p>We were tired of the skincare industry's empty promises: overpriced products with ingredients we couldn't pronounce, marketed exclusively to one demographic.</p>
-              <p>So we built Naturals — a brand that strips away the pretense and focuses on what matters: natural, effective formulations that work for real people living real lives.</p>
+              <p>So we built Meegra Naturals — a brand that strips away the pretense and focuses on what matters: natural, effective formulations that work for real people living real lives.</p>
               <p>From teens navigating their first skincare routine to men discovering self-care, to women seeking affordable quality — we're here for all of them.</p>
             </div>
           </motion.div>

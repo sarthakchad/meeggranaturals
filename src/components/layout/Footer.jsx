@@ -12,7 +12,7 @@ export default function Footer() {
     if (!email) return;
     setSubmitting(true);
     await base44.entities.NewsletterSubscriber.create({ email });
-    toast.success("Welcome to the Naturals family!");
+    toast.success("Welcome to the Meegra Naturals family!");
     setEmail(""); setSubmitting(false);
   };
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <div className="lg:col-span-1">
-            <h2 className="font-display text-2xl tracking-editorial mb-4">NATURALS</h2>
+            <h2 className="font-display text-2xl tracking-editorial mb-4">MEEGRA NATURALS</h2>
             <p className="text-sm text-background/60 leading-relaxed">Honest skincare and haircare for real people. Natural ingredients, affordable prices, visible results.</p>
           </div>
           <div>
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-background/40">© {new Date().getFullYear()} Naturals. All rights reserved.</p>
+          <p className="text-xs text-background/40">© {new Date().getFullYear()} Meegra Naturals. All rights reserved.</p>
           <div className="flex items-center gap-6">
             {["Sulfate-Free","Paraben-Free","Cruelty-Free"].map((b, i) => (
               <span key={b} className="text-xs text-background/40">{i > 0 && <span className="mr-6">·</span>}{b}</span>
