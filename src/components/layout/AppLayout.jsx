@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import CartDrawer from "./CartDrawer";
 import SearchOverlay from "./SearchOverlay";
+import WelcomeCouponPopup from "../shared/WelcomeCouponPopup";
 
 export default function AppLayout() {
   const [cartOpen, setCartOpen] = useState(false);
@@ -15,6 +16,7 @@ export default function AppLayout() {
       <Footer />
       <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
       <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+      <WelcomeCouponPopup />
     </div>
   );
 }
