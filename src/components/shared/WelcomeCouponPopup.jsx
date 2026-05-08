@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const COUPON_CODE = "WELCOME10";
+const COUPON_CODE = "FIRST10";
 const STORAGE_KEY = "meegra_first_visit_shown";
 
 export default function WelcomeCouponPopup() {
@@ -128,7 +128,7 @@ export default function WelcomeCouponPopup() {
               className="font-display text-3xl font-semibold mb-2"
               style={{ color: "hsl(24,14%,15%)" }}
             >
-              Welcome to Meegra Naturals!
+              Welcome to Meeggra Naturals!
             </h2>
 
             <p
